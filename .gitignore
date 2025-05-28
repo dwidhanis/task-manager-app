@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+npm-debug.log
+.env
+
+# Logs
+logs/
+*.log
+
+# Production
+dist/
+build/
+*.js.map
+
+# MacOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Editor
+.idea/
