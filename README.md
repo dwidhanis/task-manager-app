@@ -1,14 +1,15 @@
 # Sistem Manajemen Tugas Fullstack
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/task-manager-app/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/task-manager-app.svg?style=social)](https://github.com/yourusername/task-manager-app/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/task-manager-app.svg?style=social)](https://github.com/yourusername/task-manager-app/network/members)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dwidhanis/task-manager-app/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/dwidhanis/task-manager-app.svg?style=social)](https://github.com/dwidhanis/task-manager-app/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/dwidhanis/task-manager-app.svg?style=social)](https://github.com/dwidhanis/task-manager-app/network/members)
 
 Proyek ini adalah aplikasi Sistem Manajemen Tugas *fullstack* yang dibangun dengan **Next.js** (Frontend) dan **Node.js + Express.js** (Backend), menggunakan **MongoDB** sebagai *database*. Aplikasi ini mengimplementasikan **Role-Based Access Control (RBAC)** dan dirancang dengan fokus pada keamanan data sesuai standar pengembangan *software* modern.
 
 ---
-
 ## Daftar Isi
+<details>
+<summary><strong>Lihat Daftar Isi</strong></summary>
 
 * [Fitur](#fitur)
 * [Teknologi yang Digunakan](#teknologi-yang-digunakan)
@@ -21,10 +22,12 @@ Proyek ini adalah aplikasi Sistem Manajemen Tugas *fullstack* yang dibangun deng
 * [Flowchart & ERD](#flowchart--erd)
 * [Kontribusi](#kontribusi)
 * [Lisensi](#lisensi)
+</details>
 
 ---
 
 ## Fitur
+<details>
 
 * **Otentikasi Pengguna:**
     * Registrasi Pengguna baru
@@ -45,10 +48,12 @@ Proyek ini adalah aplikasi Sistem Manajemen Tugas *fullstack* yang dibangun deng
     * Penggunaan variabel lingkungan untuk kredensial sensitif
 * **API RESTful:** Komunikasi antara *frontend* dan *backend* melalui API RESTful.
 * **Antarmuka Pengguna Responsif:** Dibangun dengan Tailwind CSS.
+</details>
 
 ---
 
 ## Teknologi yang Digunakan
+<details>
 
 ### Backend (API)
 
@@ -70,8 +75,7 @@ Proyek ini adalah aplikasi Sistem Manajemen Tugas *fullstack* yang dibangun deng
 * **`axios`**: HTTP client berbasis Promise untuk browser dan Node.js
 * **Next.js App Router**: Untuk *routing* yang modern dan efisien
 * **`localStorage`**: Untuk menyimpan token otentikasi
-
----
+</details>
 
 ## Persyaratan Sistem
 
@@ -158,48 +162,21 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi secara lokal.
 ---
 
 ## Penggunaan Aplikasi
-
+<details>
+<summary><strong>Cara menggunakan aplikasi:</strong></summary>
 1.  **Registrasi Pengguna:** Buka `http://localhost:3000/register` di *browser* Anda.
     * Anda dapat membuat pengguna dengan peran `member`, `manager`, atau `admin`.
     * **Catatan:** Untuk tujuan pengujian awal, Anda dapat membuat pengguna `admin` terlebih dahulu.
 2.  **Login Pengguna:** Setelah registrasi berhasil, Anda akan diarahkan ke halaman *login* di `http://localhost:3000/login`.
 3.  **Dashboard:** Setelah *login* berhasil, Anda akan diarahkan ke `http://localhost:3000/dashboard` yang menampilkan profil pengguna Anda (nama, email, peran). Ini adalah rute yang dilindungi.
 4.  **Fitur Manajemen Tugas:** (Akan diimplementasikan di iterasi selanjutnya)
-
----
-
-## Struktur Proyek
-
-Proyek ini terbagi menjadi dua bagian utama:
-
-task-manager-app/
-├── backend/                  # Kode sumber Backend (Node.js/Express.js API)
-│   ├── config/               # Konfigurasi aplikasi (DB, CORS, dll.)
-│   ├── controllers/          # Logika bisnis inti (User, Task, Auth)
-│   ├── middleware/           # Middleware (Auth, RBAC)
-│   ├── models/               # Skema database (User, Task)
-│   ├── routes/               # Definisi endpoint API
-│   ├── .env                  # Variabel lingkungan backend
-│   ├── package.json
-│   └── server.js             # Titik masuk aplikasi backend
-│
-└── frontend/                 # Kode sumber Frontend (Next.js App)
-├── public/               # File statis
-├── src/                  # Kode sumber utama Next.js
-│   ├── app/              # App Router: Routing & Pages (Login, Register, Dashboard)
-│   ├── components/       # Komponen UI yang dapat digunakan kembali
-│   ├── services/         # Fungsi untuk interaksi API backend
-│   ├── styles/           # Global CSS (Tailwind CSS)
-│   └── utils/            # Fungsi utilitas frontend
-├── .env.local            # Variabel lingkungan frontend
-├── package.json
-└── next.config.js
+</details>
 
 ## Flowchart & ERD
 
 Untuk memahami alur kerja dan model data aplikasi, silakan lihat diagram berikut:
-
-### Flowchart: Registrasi, Login & Akses Tugas (dengan RBAC)
+<details>
+<summary><strong>Flowchart: Registrasi, Login & Akses Tugas (dengan RBAC)</strong></summary>
 
 ```mermaid
 graph TD
@@ -261,7 +238,39 @@ graph TD
     V --> B
     X --> B
     Z2 --> B
-    
+```
+</details>
+
+## Struktur Proyek
+<details>
+<summary><strong>Proyek ini terbagi menjadi dua bagian utama:</strong></summary>
+
+```
+task-manager-app/
+├── backend/                  # Kode sumber Backend (Node.js/Express.js API)
+│   ├── config/               # Konfigurasi aplikasi (DB, CORS, dll.)
+│   ├── controllers/          # Logika bisnis inti (User, Task, Auth)
+│   ├── middleware/           # Middleware (Auth, RBAC)
+│   ├── models/               # Skema database (User, Task)
+│   ├── routes/               # Definisi endpoint API
+│   ├── .env                  # Variabel lingkungan backend
+│   ├── package.json
+│   └── server.js             # Titik masuk aplikasi backend
+│
+└── frontend/                 # Kode sumber Frontend (Next.js App)
+├── public/               # File statis
+├── src/                  # Kode sumber utama Next.js
+│   ├── app/              # App Router: Routing & Pages (Login, Register, Dashboard)
+│   ├── components/       # Komponen UI yang dapat digunakan kembali
+│   ├── services/         # Fungsi untuk interaksi API backend
+│   ├── styles/           # Global CSS (Tailwind CSS)
+│   └── utils/            # Fungsi utilitas frontend
+├── .env.local            # Variabel lingkungan frontend
+├── package.json
+└── next.config.js
+```
+</details>
+
 ## Kontribusi
 Kontribusi disambut baik! Jika Anda menemukan bug atau ingin menyarankan fitur baru, silakan buka issue atau kirim pull request.
 
