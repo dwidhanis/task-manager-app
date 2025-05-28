@@ -3,7 +3,9 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+
 const authRoutes = require('./routes/authRoutes'); // Import rute otentikasi
+const taskRoutes = require('./routes/taskRoutes'); // Import rute tugas
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -27,6 +29,7 @@ app.get('/', (req, res) => {
 
 // Gunakan Rute API
 app.use('/api/auth', authRoutes); // Semua rute otentikasi akan diawali dengan /api/auth
+app.use('/api/tasks', taskRoutes); // Semua rute tugas akan diawali dengan /api/tasks
 
 // Handle error jika rute tidak ditemukan
 app.use((req, res, next) => {
